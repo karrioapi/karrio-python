@@ -1,0 +1,58 @@
+# purplship.Rates
+
+All URIs are relative to *https://instance.purplship.api/v1*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**fetch**](Rates.md#fetch) | **POST** /proxy/rates | 
+
+
+# **fetch**
+> RateResponse fetch(data)
+
+
+
+ The Shipping process begins by fetching rates for your shipment. The request returns rates required to create your shipment. 
+
+### Example
+```python
+from __future__ import print_function
+import time
+import purplship
+from purplship.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+purplship.api_key = 'YOUR_API_KEY'
+
+# Prepare request data
+data = purplship.RateRequest()
+
+try:
+    api_response = purplship.Rates.fetch(data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling Rates->fetch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**RateRequest**](RateRequest.md)|  | 
+
+### Return type
+
+[**RateResponse**](RateResponse.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
