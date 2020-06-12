@@ -24,6 +24,7 @@ from pprint import pprint
 
 # Configure API key authorization: Token
 purplship.api_key = 'YOUR_API_KEY'
+purplship.host = 'https://instance.purplship.api/v1'
 
 # Prepare request data
 data = purplship.ShipmentRequest() # ShipmentRequest | 

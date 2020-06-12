@@ -1343,7 +1343,7 @@ ups_economy_mail_innovations | M6
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: Token
-$purplship = new \PurplShip\PurplShip('YOUR_API_KEY');
+$purplship = new \PurplShip\PurplShip('YOUR_API_KEY', 'https://instance.purplship.api/v1');
 
 try {
     $result = $purplship->utils->getReference();
@@ -1385,7 +1385,7 @@ Returns a label PDF file.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: Token
-$purplship = new \PurplShip\PurplShip('YOUR_API_KEY');
+$purplship = new \PurplShip\PurplShip('YOUR_API_KEY', 'https://instance.purplship.api/v1');
 
 # Prepare request data
 $data = new \PurplShip\Model\LabelPrintingRequest();

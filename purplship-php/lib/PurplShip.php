@@ -85,21 +85,23 @@ class PurplShip
     /**
      * @param string $apiKey
      * @param string $host
+     * @param string $apiKeyPrefix
      */
     public function __construct(
         string $apiKey = null,
-        string $host = null
+        string $host = null,
+        string $apiKeyPrefix = "Token"
     ) {
         $this->config = Configuration::getDefaultConfiguration();
-        $this->config->setApiKey('Authorization', $apiKey);
+        $this->config->setApiKey('Authorization', $apiKeyPrefix . ' ' . $apiKey);
         $this->config->setHost($host);
-
+        
         $this->apiClient = new Client();
 
-        $carriers = new Carriers($this->apiClient, $this->config);
-        $rates = new Rates($this->apiClient, $this->config);
-        $shipments = new Shipments($this->apiClient, $this->config);
-        $tracking = new Tracking($this->apiClient, $this->config);
-        $utils = new Utils($this->apiClient, $this->config);
+        $this->carriers = new Carriers($this->apiClient, $this->config);
+        $this->rates = new Rates($this->apiClient, $this->config);
+        $this->shipments = new Shipments($this->apiClient, $this->config);
+        $this->tracking = new Tracking($this->apiClient, $this->config);
+        $this->utils = new Utils($this->apiClient, $this->config);
     }
 }

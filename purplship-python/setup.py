@@ -26,7 +26,7 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="PurplShip Multi-carrier API Python client library",
+    description="PurplShip Multi-carrier Shipping API Python client library",
     author_email="hello@purplship.com",
     url="https://github.com/PurplShip/purplship-clients/tree/integrate-purplship-clients/python-client",
     keywords=["PurplShip", "PurplShip Multi-carrier API", "Shipping API"],

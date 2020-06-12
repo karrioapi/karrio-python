@@ -1,6 +1,6 @@
 {
-    "name": "/",
-    "description": "",
+    "name": "purplship/purplship",
+    "description": "PurplShip Multi-carrier Shipping API Python client library",
     "keywords": [
         "purplship",
         "php",
@@ -26,9 +26,9 @@
         "friendsofphp/php-cs-fixer": "~2.12"
     },
     "autoload": {
-        "psr-4": { "PurplShip\\Client\\": "lib/" }
+        "psr-4": { "PurplShip\\": "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "PurplShip\\Client\\": "test/" }
+        "psr-4": { "PurplShip\\": "test/" }
     }
 }

@@ -20,7 +20,7 @@ Once a Shipment is initialized by fetching the rates, the remaining requirements
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: Token
-$purplship = new \PurplShip\PurplShip('YOUR_API_KEY');
+$purplship = new \PurplShip\PurplShip('YOUR_API_KEY', 'https://instance.purplship.api/v1');
 
 # Prepare request data
 $data = new \PurplShip\Model\ShipmentRequest();
