@@ -9,7 +9,7 @@ Python 3.4+
 ### pip install
 
 ```sh
-pip install purplship
+pip install purplship-python
 ```
 
 Then import the package:
