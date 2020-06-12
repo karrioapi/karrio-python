@@ -12,8 +12,8 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "purplship"
-VERSION = "1.0.0"
+NAME = "purplship-python"
+VERSION = "2020.6.2"
 
 REQUIRES = [
     "certifi>=2017.4.17",
@@ -28,10 +28,10 @@ setup(
     version=VERSION,
     description="PurplShip Multi-carrier Shipping API Python client library",
     author_email="hello@purplship.com",
-    url="https://github.com/PurplShip/purplship-clients/tree/integrate-purplship-clients/python-client",
+    url="https://github.com/PurplShip/purplship-clients",
     keywords=["PurplShip", "PurplShip Multi-carrier API", "Shipping API"],
     install_requires=REQUIRES,
-    packages=find_packages(),
+    packages=find_packages(".", exclude=["tests*"]),
     include_package_data=True,
     long_description="""\
     PurplShip is a Multi-carrier Shipping API that simplifies the integration of logistic carrier services  # noqa: E501

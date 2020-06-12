@@ -1,5 +1,6 @@
 {
-    "name": "purplship/purplship",
+    "name": "purplship/purplship-php",
+    "version": "2020.6.2",
     "description": "PurplShip Multi-carrier Shipping API Python client library",
     "keywords": [
         "purplship",
@@ -11,7 +12,7 @@
     "license": "MIT",
     "authors": [{
         "name": "PurplShip Team",
-        "homepage": "https://github.com/purplship"
+        "homepage": "https://github.com/purplship/purplship-clients"
     }],
     "require": {
         "php": ">=5.5",
