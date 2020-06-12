@@ -123,7 +123,7 @@ class Carriers(object):
         # Authentication setting
         auth_settings = ['Token']  # noqa: E501
 
-        return self.client.call(
+        return self.client.call_api(
             '/carriers', 'GET',
             path_params,
             query_params,

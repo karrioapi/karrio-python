@@ -26,6 +26,7 @@ from purplship.models import *
 
 
 api_key = None
+api_key_prefix = 'Token'
 host = None
 api_client = None
 
@@ -33,51 +34,50 @@ configuration = Configuration()
 
 
 def init_client():
-    same_api_key = api_key == configuration.api_key['Authorization']
-    same_host = host == configuration.host
-    
-    if same_api_key and same_host and api_client is not None:
+    global api_client
+    if (api_client is not None) and (host == configuration.host) and (api_key == configuration.api_key['Authorization']):
         return api_client
 
     configuration.host = host
-    configuration.api_key['Authorization'] = api_key
-    return ApiClient(configuration)
+    configuration.api_key['Authorization'] = f'{api_key_prefix} {api_key}'
+    api_client = ApiClient(configuration)
+    return api_client
 
 
 class Carriers:
 
     @staticmethod
     def retrieve(*args, **kwargs):
-        resources.Carriers(init_client()).retrieve(*args, **kwargs)
+        return resources.Carriers(init_client()).retrieve(*args, **kwargs)
 
 
 class Rates:
 
     @staticmethod
     def fetch(*args, **kwargs):
-        resources.Rates(init_client()).fetch(*args, **kwargs)
+        return resources.Rates(init_client()).fetch(*args, **kwargs)
 
 
 class Shipments:
 
     @staticmethod
     def create(*args, **kwargs):
-        resources.Shipments(init_client()).create(*args, **kwargs)
+        return resources.Shipments(init_client()).create(*args, **kwargs)
 
 
 class Tracking:
 
     @staticmethod
     def retrieve(*args, **kwargs):
-        resources.Tracking(init_client()).retrieve(*args, **kwargs)
+        return resources.Tracking(init_client()).retrieve(*args, **kwargs)
 
 
 class Utils:
 
     @staticmethod
     def get_reference(*args, **kwargs):
-        resources.Utils(init_client()).get_reference(*args, **kwargs)
+        return resources.Utils(init_client()).get_reference(*args, **kwargs)
 
     @staticmethod
     def print_label(*args, **kwargs):
-        resources.Utils(init_client()).print_label(*args, **kwargs)
+        return resources.Utils(init_client()).print_label(*args, **kwargs)
