@@ -1,18 +1,18 @@
-# purplship.Rates
+# purplship.Tracking
 
 All URIs are relative to *https://instance.purplship.api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fetch**](Rates.md#fetch) | **POST** /proxy/rates | 
+[**fetch**](TrackingApi.md#fetch) | **GET** /proxy/tracking/{carrier_name}/{tracking_number} | Track a Shipment
 
 
 # **fetch**
-> RateResponse fetch(data)
+> TrackingResponse fetch(carrier_name, tracking_number, test=test)
 
+Track a Shipment
 
-
- The Shipping process begins by fetching rates for your shipment. The request returns rates required to create your shipment. 
+ You can track a shipment by specifying the carrier and the shipment tracking number. 
 
 ### Example
 ```python
@@ -26,29 +26,32 @@ from pprint import pprint
 purplship.api_key = 'YOUR_API_KEY'
 purplship.host = 'https://instance.purplship.api/v1'
 
-# Prepare request data
-data = purplship.RateRequest()
+carrier_name = 'carrier_name_example'
+tracking_number = 'tracking_number_example'
+test = false
 
 try:
-    api_response = purplship.Rates.fetch(data)
+    api_response = purplship.Tracking.fetch(carrier_name, tracking_number, test=test)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling Rates->fetch: %s\n" % e)
+    print("Exception when calling Tracking->fetch: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**RateRequest**](RateRequest.md)|  | 
+ **carrier_name** | **str**|  | 
+ **tracking_number** | **str**|  | 
+ **test** | **bool**|  The test flag indicates whether to use a carrier configured for test.   | [optional] [default to false]
 
 ### Return type
 
-[**RateResponse**](RateResponse.md)
+[**TrackingResponse**](TrackingResponse.md)
 
 ### Authorization
 
-[Token](../README.md#Token)
+[Token](../README.md#Token), [OAuth2 password](../README.md#oauth2-password)
 
 ### HTTP request headers
 

@@ -1,18 +1,18 @@
-# purplship.Carriers
+# purplship.Shipment
 
 All URIs are relative to *https://instance.purplship.api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieve**](Carriers.md#retrieve) | **GET** /carriers | 
+[**create**](ShipmentApi.md#create) | **POST** /proxy/shipments | Create a Shipment
 
 
-# **retrieve**
-> list[CarrierSettings] retrieve(carrier_name=carrier_name, carrier_id=carrier_id, test=test)
+# **create**
+> ShipmentResponse create(data)
 
+Create a Shipment
 
-
-Returns the list of configured carriers
+ Once a Shipment is initialized by fetching the rates, the remaining requirements might be specified  to submit the shipment to the carrier of the selected rate of your choice. 
 
 ### Example
 ```python
@@ -26,32 +26,28 @@ from pprint import pprint
 purplship.api_key = 'YOUR_API_KEY'
 purplship.host = 'https://instance.purplship.api/v1'
 
+data = purplship.models.ShipmentRequest()
+
 try:
-    api_response = purplship.Carriers.retrieve(
-        carrier_name='carrier_name_example',
-        carrier_id='carrier_id_example',
-        test=true
-    )
+    api_response = purplship.Shipment.create(data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling Carriers->retrieve: %s\n" % e)
+    print("Exception when calling Shipment->create: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **carrier_name** | **str**| Indicates a carrier (type) | [optional] 
- **carrier_id** | **str**| Indicates a specific carrier configuration name. | [optional] 
- **test** | **bool**|  The test flag indicates whether to use a carrier configured for test.   | [optional] 
+ **data** | [**ShipmentRequest**](ShipmentRequest.md)|  | 
 
 ### Return type
 
-[**list[CarrierSettings]**](CarrierSettings.md)
+[**ShipmentResponse**](ShipmentResponse.md)
 
 ### Authorization
 
-[Token](../README.md#Token)
+[Token](../README.md#Token), [OAuth2 password](../README.md#oauth2-password)
 
 ### HTTP request headers
 

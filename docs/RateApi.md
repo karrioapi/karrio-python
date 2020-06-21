@@ -1,18 +1,18 @@
-# purplship.Shipments
+# purplship.Rate
 
 All URIs are relative to *https://instance.purplship.api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create**](Shipments.md#create) | **POST** /proxy/shipments | 
+[**fetch**](RateApi.md#fetch) | **POST** /proxy/rates | Fetch Shipment Rates
 
 
-# **create**
-> ShipmentResponse create(data)
+# **fetch**
+> RateResponse fetch(data)
 
+Fetch Shipment Rates
 
-
- Once a Shipment is initialized by fetching the rates, the remaining requirements might be specified  to submit the shipment to the carrier of the selected rate of your choice. 
+ The Shipping process begins by fetching rates for your shipment. The request returns rates required to create your shipment. 
 
 ### Example
 ```python
@@ -26,29 +26,28 @@ from pprint import pprint
 purplship.api_key = 'YOUR_API_KEY'
 purplship.host = 'https://instance.purplship.api/v1'
 
-# Prepare request data
-data = purplship.ShipmentRequest() # ShipmentRequest | 
+data = purplship.models.RateRequest()
 
 try:
-    api_response = purplship.Shipments.create(data)
+    api_response = purplship.Rate.fetch(data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling Shipments->create: %s\n" % e)
+    print("Exception when calling Rate->fetch: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**ShipmentRequest**](ShipmentRequest.md)|  | 
+ **data** | [**RateRequest**](RateRequest.md)|  | 
 
 ### Return type
 
-[**ShipmentResponse**](ShipmentResponse.md)
+[**RateResponse**](RateResponse.md)
 
 ### Authorization
 
-[Token](../README.md#Token)
+[Token](../README.md#Token), [OAuth2 password](../README.md#oauth2-password)
 
 ### HTTP request headers
 
