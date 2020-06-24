@@ -33,10 +33,10 @@ purplship.api_key = 'YOUR_API_KEY'
 purplship.host = 'https://instance.purplship.api/v1'
 
 try:
-    configured_carriers = purplship.Carriers.retrieve()
-    pprint(configured_carriers)
+    api_response = purplship.Carriers.list()
+    pprint(api_response)
 except ApiException as e:
-    print("Exception when calling Carriers->retrieve: %s\n" % e)
+    print("Exception when calling Carriers->list: %s\n" % e)
 
 ```
 
@@ -46,12 +46,13 @@ All URIs are relative to *https://instance.purplship.api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Carriers* | [**retrieve**](docs/Carriers.md#retrieve) | **GET** /carriers | 
-*Rates* | [**fetch**](docs/Rates.md#fetch) | **POST** /proxy/rates | 
-*Shipments* | [**create**](docs/Shipments.md#create) | **POST** /proxy/shipments | 
-*Tracking* | [**retrieve**](docs/Tracking.md#retrieve) | **GET** /proxy/tracking/{carrier_name}/{tracking_number} | 
-*Utils* | [**get_reference**](docs/Utils.md#get_reference) | **GET** /references | 
-*Utils* | [**print_label**](docs/Utils.md#print_label) | **POST** /labels | 
+*Carriers* | [**list**](docs/CarriersApi.md#list) | **GET** /carriers | List all Carriers
+*Carriers* | [**retrieve**](docs/CarriersApi.md#retrieve) | **GET** /carriers/{carrier_id_or_pk} | Retrieve a Carrier
+*Rate* | [**fetch**](docs/RateApi.md#fetch) | **POST** /proxy/rates | Fetch Shipment Rates
+*Shipment* | [**create**](docs/ShipmentApi.md#shipment) | **POST** /proxy/shipments | Create a Shipment
+*Tracking* | [**fetch**](docs/TrackingApi.md#fetch) | **GET** /proxy/tracking/{carrier_name}/{tracking_number} | Track a Shipment
+*Utils* | [**references**](docs/UtilsApi.md#references) | **GET** /references | Get all References
+*Utils* | [**print_label**](docs/UtilsApi.md#print_label) | **POST** /labels | Print a Label
 
 
 ## Documentation For Models
@@ -67,6 +68,7 @@ Class | Method | HTTP request | Description
  - [Invoice](docs/Invoice.md)
  - [LabelPrintingRequest](docs/LabelPrintingRequest.md)
  - [Message](docs/Message.md)
+ - [Options](docs/Options.md)
  - [Parcel](docs/Parcel.md)
  - [Payment](docs/Payment.md)
  - [Rate](docs/Rate.md)
@@ -89,6 +91,15 @@ Class | Method | HTTP request | Description
 - **Type**: API key
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
+
+## OAuth2 password
+
+- **Type**: OAuth
+- **Flow**: password
+- **Authorization URL**: 
+- **Scopes**: 
+ - **read**: Read everything.
+ - **write**: Write everything,
 
 
 ## Author

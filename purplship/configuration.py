@@ -47,7 +47,7 @@ class Configuration(object):
         # Authentication Settings
         # dict to store API key(s)
         self.api_key = {}
-        # dict to store API prefix (e.g. Bearer)
+        # dict to store API prefix (e.g. Token)
         self.api_key_prefix = {}
         # function to refresh API key if expired
         self.refresh_api_key_hook = None

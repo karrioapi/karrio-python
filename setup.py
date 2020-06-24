@@ -16,7 +16,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 NAME = "purplship-python"
-VERSION = "2020.6.2"
+VERSION = "2020.6.3"
 
 DEV_REQUIRES = [
     "wheel",

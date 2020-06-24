@@ -22,7 +22,7 @@ from purplship.client import ApiClient
 from purplship.configuration import Configuration
 
 # import models into sdk package
-from purplship.models import *
+import purplship.models as models
 
 
 api_key = None
@@ -47,36 +47,40 @@ def init_client():
 class Carriers:
 
     @staticmethod
+    def list(*args, **kwargs):
+        return resources.Carriers(init_client()).list(*args, **kwargs)
+
+    @staticmethod
     def retrieve(*args, **kwargs):
         return resources.Carriers(init_client()).retrieve(*args, **kwargs)
 
 
-class Rates:
+class Rate:
 
     @staticmethod
     def fetch(*args, **kwargs):
-        return resources.Rates(init_client()).fetch(*args, **kwargs)
+        return resources.Rate(init_client()).fetch(*args, **kwargs)
 
 
-class Shipments:
+class Shipment:
 
     @staticmethod
     def create(*args, **kwargs):
-        return resources.Shipments(init_client()).create(*args, **kwargs)
+        return resources.Shipment(init_client()).create(*args, **kwargs)
 
 
 class Tracking:
 
     @staticmethod
-    def retrieve(*args, **kwargs):
-        return resources.Tracking(init_client()).retrieve(*args, **kwargs)
+    def fetch(*args, **kwargs):
+        return resources.Tracking(init_client()).fetch(*args, **kwargs)
 
 
 class Utils:
 
     @staticmethod
-    def get_reference(*args, **kwargs):
-        return resources.Utils(init_client()).get_reference(*args, **kwargs)
+    def references(*args, **kwargs):
+        return resources.Utils(init_client()).references(*args, **kwargs)
 
     @staticmethod
     def print_label(*args, **kwargs):
