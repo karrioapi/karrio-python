@@ -26,7 +26,7 @@ from pprint import pprint
 purplship.api_key = 'YOUR_API_KEY'
 purplship.host = 'https://instance.purplship.api/v1'
 
-data = purplship.models.ShipmentRequest()
+data = purplship.ShipmentRequest()
 
 try:
     api_response = purplship.Shipment.create(data)
