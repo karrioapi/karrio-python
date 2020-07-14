@@ -22,7 +22,22 @@ from purplship.client import ApiClient
 from purplship.configuration import Configuration
 
 # import models into sdk package
-import purplship.models as models
+from purplship.models.address import Address
+from purplship.models.card import Card
+from purplship.models.carrier_settings import CarrierSettings
+from purplship.models.charge import Charge
+from purplship.models.commodity import Commodity
+from purplship.models.customs import Customs
+from purplship.models.doc import Doc
+from purplship.models.invoice import Invoice
+from purplship.models.label_printing_request import LabelPrintingRequest
+from purplship.models.message import Message
+from purplship.models.options import Options
+from purplship.models.parcel import Parcel
+from purplship.models.payment import Payment
+from purplship.models.rate_request import RateRequest
+from purplship.models.references import References
+from purplship.models.shipment_request import ShipmentRequest
 
 
 api_key = None
