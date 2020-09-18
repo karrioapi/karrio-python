@@ -16,15 +16,15 @@
 from __future__ import absolute_import
 
 # import apis into sdk package
-from purplship.api.addresses import AddressesApi
-from purplship.api.carriers import CarriersApi
-from purplship.api.customs import CustomsApi
-from purplship.api.parcels import ParcelsApi
-from purplship.api.rates import RatesApi
-from purplship.api.shipments import ShipmentsApi
-from purplship.api.shipping import ShippingApi
-from purplship.api.tracking import TrackingApi
-from purplship.api.utils import UtilsApi
+from purplship.api.addresses_api import AddressesApi
+from purplship.api.carriers_api import CarriersApi
+from purplship.api.customs_api import CustomsApi
+from purplship.api.parcels_api import ParcelsApi
+from purplship.api.rates_api import RatesApi
+from purplship.api.shipments_api import ShipmentsApi
+from purplship.api.shipping_api import ShippingApi
+from purplship.api.tracking_api import TrackingApi
+from purplship.api.utils_api import UtilsApi
 
 # import ApiClient
 from purplship.api_client import ApiClient
