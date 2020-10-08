@@ -29,36 +29,6 @@ from purplship.api.utils_api import UtilsApi
 # import ApiClient
 from purplship.api_client import ApiClient
 from purplship.configuration import Configuration
-# import models into sdk package
-from purplship.models.address import Address
-from purplship.models.address_data import AddressData
-from purplship.models.card import Card
-from purplship.models.carrier_settings import CarrierSettings
-from purplship.models.charge import Charge
-from purplship.models.commodity import Commodity
-from purplship.models.customs import Customs
-from purplship.models.customs_data import CustomsData
-from purplship.models.doc import Doc
-from purplship.models.error_response import ErrorResponse
-from purplship.models.invoice import Invoice
-from purplship.models.label_printing_request import LabelPrintingRequest
-from purplship.models.message import Message
-from purplship.models.parcel import Parcel
-from purplship.models.parcel_data import ParcelData
-from purplship.models.payment import Payment
-from purplship.models.payment_data import PaymentData
-from purplship.models.rate import Rate
-from purplship.models.rate_request import RateRequest
-from purplship.models.rate_response import RateResponse
-from purplship.models.references import References
-from purplship.models.shipment import Shipment
-from purplship.models.shipment_data import ShipmentData
-from purplship.models.shipment_purchase_data import ShipmentPurchaseData
-from purplship.models.shipment_response import ShipmentResponse
-from purplship.models.shipping_request import ShippingRequest
-from purplship.models.tracking_details import TrackingDetails
-from purplship.models.tracking_event import TrackingEvent
-from purplship.models.tracking_response import TrackingResponse
 
 
 api_key = None
@@ -104,10 +74,6 @@ class Carriers:
     @staticmethod
     def list(*args, **kwargs):
         return CarriersApi(init_client()).list(*args, **kwargs)
-
-    @staticmethod
-    def retrieve(*args, **kwargs):
-        return CarriersApi(init_client()).retrieve(*args, **kwargs)
 
 
 class Customs:

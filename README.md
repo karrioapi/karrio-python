@@ -32,7 +32,6 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 from __future__ import print_function
-import time
 import purplship
 from purplship.rest import ApiException
 from pprint import pprint
