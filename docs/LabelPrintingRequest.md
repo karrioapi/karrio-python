@@ -1,6 +1,7 @@
 # LabelPrintingRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  PDF file name.  eg: shipment-[trackingNumber]  | 

@@ -1,6 +1,7 @@
 # Payment
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | A unique identifier | [optional] 

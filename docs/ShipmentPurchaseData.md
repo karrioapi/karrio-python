@@ -1,6 +1,7 @@
 # ShipmentPurchaseData
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **selected_rate_id** | **str** | The shipment selected rate. | 
