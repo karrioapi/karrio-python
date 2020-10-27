@@ -1,6 +1,7 @@
 # TrackingStatus
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | A unique identifier | [optional] 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **carrier_id** | **str** | The tracking carrier configured identifier | 
 **tracking_number** | **str** | The shipment tracking number | 
 **events** | [**list[TrackingEvent]**](TrackingEvent.md) | The tracking details events | [optional] 
-**shipment_id** | **str** | The system shipment associated. | [optional] 
+**test_mode** | **bool** | Specified whether it was created with a carrier in test mode | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

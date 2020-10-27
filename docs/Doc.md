@@ -1,6 +1,7 @@
 # Doc
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** | The document type | 

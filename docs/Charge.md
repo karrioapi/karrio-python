@@ -1,6 +1,7 @@
 # Charge
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | The charge description | [optional] 

@@ -1,6 +1,7 @@
 # References
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **countries** | **list[str]** |  | 
