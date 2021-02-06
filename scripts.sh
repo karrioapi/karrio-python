@@ -6,11 +6,6 @@ ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 BASE_DIR="${PWD##*/}"
 ENV_DIR=".venv"
 
-export SECRET_KEY="n*s-ex6@ex_r1i%bk=3jd)p+lsick5bi*90!mbk7rc3iy_op1r"
-export wheels=~/Wheels
-export PIP_FIND_LINKS="https://git.io/purplship"
-[[ -d "$wheels" ]] && export PIP_FIND_LINKS=file://${wheels}
-
 export EMAIL_HOST="localhost"
 export EMAIL_PORT=1025
 
@@ -36,6 +31,7 @@ create_env() {
     mkdir -p "${ROOT:?}/$ENV_DIR"
     python3 -m venv "${ROOT:?}/$ENV_DIR/$BASE_DIR" &&
     activate_env &&
+    pip install --upgrade pip &&
     pip install --upgrade pip wheel twine
 }
 
@@ -63,7 +59,7 @@ build() {
   python setup.py bdist_wheel
 }
 
-publish() {
+upload() {
   twine upload dist/*
 }
 

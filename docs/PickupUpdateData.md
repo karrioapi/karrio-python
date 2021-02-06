@@ -1,7 +1,6 @@
 # PickupUpdateData
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pickup_date** | **str** |  The expected pickup date  Date Format: YYYY-MM-DD  | [optional] 
@@ -14,5 +13,5 @@ Name | Type | Description | Notes
 **tracking_numbers** | **list[str]** | The list of shipments to be picked up | [optional] 
 **confirmation_number** | **str** | pickup identification number | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

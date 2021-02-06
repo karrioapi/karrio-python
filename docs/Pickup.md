@@ -1,7 +1,6 @@
 # Pickup
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | A unique pickup identifier | [optional] 
@@ -19,5 +18,5 @@ Name | Type | Description | Notes
 **options** | **object** | Advanced carrier specific pickup options | [optional] 
 **test_mode** | **bool** | Specified whether it was created with a carrier in test mode | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

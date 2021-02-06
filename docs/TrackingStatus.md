@@ -1,7 +1,6 @@
 # TrackingStatus
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | A unique identifier | [optional] 
@@ -11,5 +10,5 @@ Name | Type | Description | Notes
 **events** | [**list[TrackingEvent]**](TrackingEvent.md) | The tracking details events | [optional] 
 **test_mode** | **bool** | Specified whether it was created with a carrier in test mode | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
