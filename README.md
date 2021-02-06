@@ -6,7 +6,7 @@ Visit [purplship.com](https://purplship.com) to deploy your private cloud multi-
 
 ## Documentation
 
-See the full [Python API docs](https://docs.purplship.com/#/guide).
+See the full [Python API docs](https://docs.purplship.com/#/v2020.12/guides/reference?id=reference).
 
 ## Requirements
 
@@ -41,7 +41,7 @@ purplship.api_key = 'YOUR_API_KEY'
 purplship.host = 'https://instance.purplship.api/v1'
 
 try:
-    api_response = purplship.Carriers.list()
+    api_response = purplship.Utils.references()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling purplship.Carriers->list: %s\n" % e)
@@ -52,16 +52,15 @@ except ApiException as e:
 
 - [Address](docs/Address.md)
 - [AddressData](docs/AddressData.md)
-- [Card](docs/Card.md)
 - [CarrierSettings](docs/CarrierSettings.md)
 - [Charge](docs/Charge.md)
 - [Commodity](docs/Commodity.md)
 - [Customs](docs/Customs.md)
 - [CustomsData](docs/CustomsData.md)
-- [Doc](docs/Doc.md)
 - [ErrorResponse](docs/ErrorResponse.md)
 - [LabelPrintingRequest](docs/LabelPrintingRequest.md)
 - [Message](docs/Message.md)
+- [Operation](docs/Operation.md)
 - [OperationConfirmation](docs/OperationConfirmation.md)
 - [OperationResponse](docs/OperationResponse.md)
 - [Parcel](docs/Parcel.md)
@@ -84,11 +83,11 @@ except ApiException as e:
 - [ShipmentCancelRequest](docs/ShipmentCancelRequest.md)
 - [ShipmentData](docs/ShipmentData.md)
 - [ShipmentPurchaseData](docs/ShipmentPurchaseData.md)
-- [ShipmentResponse](docs/ShipmentResponse.md)
 - [ShippingRequest](docs/ShippingRequest.md)
 - [TrackingEvent](docs/TrackingEvent.md)
 - [TrackingResponse](docs/TrackingResponse.md)
 - [TrackingStatus](docs/TrackingStatus.md)
+
 
 ## Author
 

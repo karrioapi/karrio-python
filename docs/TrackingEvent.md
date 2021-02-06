@@ -1,7 +1,6 @@
 # TrackingEvent
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_date** | **str** | The tracking event&#x27;s date | 
@@ -11,5 +10,5 @@ Name | Type | Description | Notes
 **time** | **str** | The tracking event&#x27;s time | [optional] 
 **signatory** | **str** | The tracking signature on delivery | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

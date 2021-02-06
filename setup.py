@@ -16,7 +16,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 NAME = "purplship-python"
-VERSION = "2020.10"
+VERSION = "2021.0"
 
 DEV_REQUIRES = [
     "wheel",
@@ -34,12 +34,12 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="PurplShip Multi-carrier Shipping API Python client library",
+    description="Purplship Multi-carrier Shipping API Python client library",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author_email="hello@purplship.com",
     url="https://github.com/PurplShip/purplship-python-client",
-    keywords=["PurplShip", "PurplShip Multi-carrier API", "Shipping API"],
+    keywords=["Purplship", "Multi-carrier API", "Shipping API"],
     install_requires=REQUIRES,
     extras_require={'dev': DEV_REQUIRES},
     packages=find_packages(exclude=["test*"]),
