@@ -10,5 +10,5 @@ from purplship.api.parcels_api import ParcelsApi
 from purplship.api.pickups_api import PickupsApi
 from purplship.api.proxy_api import ProxyApi
 from purplship.api.shipments_api import ShipmentsApi
-from purplship.api.tracking_api import TrackingApi
+from purplship.api.trackers_api import TrackersApi
 from purplship.api.utils_api import UtilsApi
