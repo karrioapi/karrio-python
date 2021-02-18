@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**paid_by** | **str** | The payment payer | 
+**paid_by** | **str** | The payment payer | [optional] [default to 'sender']
 **amount** | **float** | The payment amount if known | [optional] 
 **currency** | **str** | The payment amount currency | 
 **account_number** | **str** | The selected rate carrier payer account number | [optional] 
