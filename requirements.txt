@@ -1,4 +1,5 @@
 twine
 wheel
+ipython
 
 -e .

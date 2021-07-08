@@ -6,7 +6,7 @@ Visit [purplship.com](https://purplship.com) to deploy your private cloud multi-
 
 ## Documentation
 
-See the full [Python API docs](https://docs.purplship.com/#/v2020.12/guides/reference?id=reference).
+See the full [Python API docs](https://docs.purplship.com).
 
 ## Requirements
 
@@ -38,10 +38,10 @@ from pprint import pprint
 
 # Configure API key authorization: Token
 purplship.api_key = 'YOUR_API_KEY'
-purplship.host = 'https://instance.purplship.api/v1'
+purplship.host = 'https://instance.purplship.api'
 
 try:
-    api_response = purplship.Utils.references()
+    api_response = purplship.Carriers.list()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling purplship.Carriers->list: %s\n" % e)
