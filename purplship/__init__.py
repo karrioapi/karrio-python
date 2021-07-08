@@ -13,8 +13,10 @@
 """
 
 from __future__ import absolute_import
+import typing
 
 # import apis into sdk package
+from purplship.api.api_api import APIApi
 from purplship.api.addresses_api import AddressesApi
 from purplship.api.carriers_api import CarriersApi
 from purplship.api.customs_api import CustomsApi
@@ -23,7 +25,7 @@ from purplship.api.pickups_api import PickupsApi
 from purplship.api.proxy_api import ProxyApi
 from purplship.api.shipments_api import ShipmentsApi
 from purplship.api.trackers_api import TrackersApi
-from purplship.api.utils_api import UtilsApi
+from purplship.api.webhooks_api import WebhooksApi
 # import ApiClient
 from purplship.api_client import ApiClient
 from purplship.configuration import Configuration
@@ -33,187 +35,42 @@ api_key = None
 api_key_prefix = 'Token'
 host = None
 api_client = None
-
 configuration = Configuration()
 
 
 def init_client():
     global api_client
-    if (api_client is not None) and (host == configuration.host) and (api_key == configuration.api_key['Authorization']):
+    global configuration
+    if (api_client is not None) and (configuration.host == host) \
+            and (configuration.api_key['Authorization'] == f'{api_key_prefix} {api_key}'):
         return api_client
 
+    configuration = Configuration()
     configuration.host = host
     configuration.api_key['Authorization'] = f'{api_key_prefix} {api_key}'
     api_client = ApiClient(configuration)
+
     return api_client
 
 
-class Addresses:
+def define_api(api_class: typing.Type):
+    class _API(api_class):
+        def __init__(self):
+            pass
 
-    @staticmethod
-    def create(*args, **kwargs):
-        return AddressesApi(init_client()).create(*args, **kwargs)
+        def __getattribute__(self, item):
+            return getattr(api_class(init_client()), item)
 
-    @staticmethod
-    def list(*args, **kwargs):
-        return AddressesApi(init_client()).list(*args, **kwargs)
-
-    @staticmethod
-    def retrieve(*args, **kwargs):
-        return AddressesApi(init_client()).retrieve(*args, **kwargs)
-
-    @staticmethod
-    def update(*args, **kwargs):
-        return AddressesApi(init_client()).update(*args, **kwargs)
+    return _API()
 
 
-class Carriers:
-
-    @staticmethod
-    def list(*args, **kwargs):
-        return CarriersApi(init_client()).list(*args, **kwargs)
-
-
-class Customs:
-
-    @staticmethod
-    def create(*args, **kwargs):
-        return CustomsApi(init_client()).create(*args, **kwargs)
-
-    @staticmethod
-    def list(*args, **kwargs):
-        return CustomsApi(init_client()).list(*args, **kwargs)
-
-    @staticmethod
-    def retrieve(*args, **kwargs):
-        return CustomsApi(init_client()).retrieve(*args, **kwargs)
-
-    @staticmethod
-    def update(*args, **kwargs):
-        return CustomsApi(init_client()).update(*args, **kwargs)
-
-
-class Parcels:
-
-    @staticmethod
-    def create(*args, **kwargs):
-        return ParcelsApi(init_client()).create(*args, **kwargs)
-
-    @staticmethod
-    def list(*args, **kwargs):
-        return ParcelsApi(init_client()).list(*args, **kwargs)
-
-    @staticmethod
-    def retrieve(*args, **kwargs):
-        return ParcelsApi(init_client()).retrieve(*args, **kwargs)
-
-    @staticmethod
-    def update(*args, **kwargs):
-        return ParcelsApi(init_client()).update(*args, **kwargs)
-
-
-class Pickups:
-
-    @staticmethod
-    def cancel(*args, **kwargs):
-        return PickupsApi(init_client()).cancel(*args, **kwargs)
-
-    @staticmethod
-    def schedule(*args, **kwargs):
-        return PickupsApi(init_client()).schedule(*args, **kwargs)
-
-    @staticmethod
-    def update(*args, **kwargs):
-        return PickupsApi(init_client()).update(*args, **kwargs)
-
-
-class Proxy:
-
-    @staticmethod
-    def buy_label(*args, **kwargs):
-        return ProxyApi(init_client()).buy_label(*args, **kwargs)
-
-    @staticmethod
-    def cancel_pickup(*args, **kwargs):
-        return ProxyApi(init_client()).cancel_pickup(*args, **kwargs)
-
-    @staticmethod
-    def fetch_rates(*args, **kwargs):
-        return ProxyApi(init_client()).fetch_rates(*args, **kwargs)
-
-    @staticmethod
-    def schedule_pickup(*args, **kwargs):
-        return ProxyApi(init_client()).schedule_pickup(*args, **kwargs)
-
-    @staticmethod
-    def track_shipment(*args, **kwargs):
-        return ProxyApi(init_client()).track_shipment(*args, **kwargs)
-
-    @staticmethod
-    def update_pickup(*args, **kwargs):
-        return ProxyApi(init_client()).update_pickup(*args, **kwargs)
-
-    @staticmethod
-    def void_label(*args, **kwargs):
-        return ProxyApi(init_client()).void_label(*args, **kwargs)
-
-
-class Shipments:
-
-    @staticmethod
-    def add_customs(*args, **kwargs):
-        return ShipmentsApi(init_client()).add_customs(*args, **kwargs)
-
-    @staticmethod
-    def add_parcel(*args, **kwargs):
-        return ShipmentsApi(init_client()).add_parcel(*args, **kwargs)
-
-    @staticmethod
-    def cancel(*args, **kwargs):
-        return ShipmentsApi(init_client()).cancel(*args, **kwargs)
-
-    @staticmethod
-    def create(*args, **kwargs):
-        return ShipmentsApi(init_client()).create(*args, **kwargs)
-
-    @staticmethod
-    def list(*args, **kwargs):
-        return ShipmentsApi(init_client()).list(*args, **kwargs)
-
-    @staticmethod
-    def purchase(*args, **kwargs):
-        return ShipmentsApi(init_client()).purchase(*args, **kwargs)
-
-    @staticmethod
-    def rates(*args, **kwargs):
-        return ShipmentsApi(init_client()).rates(*args, **kwargs)
-
-    @staticmethod
-    def retrieve(*args, **kwargs):
-        return ShipmentsApi(init_client()).retrieve(*args, **kwargs)
-
-    @staticmethod
-    def set_options(*args, **kwargs):
-        return ShipmentsApi(init_client()).set_options(*args, **kwargs)
-
-
-class Trackers:
-
-    @staticmethod
-    def retrieve(*args, **kwargs):
-        return TrackersApi(init_client()).retrieve(*args, **kwargs)
-
-    @staticmethod
-    def list(*args, **kwargs):
-        return TrackersApi(init_client()).list(*args, **kwargs)
-
-
-class Utils:
-
-    @staticmethod
-    def print_label(*args, **kwargs):
-        return UtilsApi(init_client()).print_label(*args, **kwargs)
-
-    @staticmethod
-    def references(*args, **kwargs):
-        return UtilsApi(init_client()).references(*args, **kwargs)
+API = define_api(APIApi)
+Addresses = define_api(AddressesApi)
+Carriers = define_api(CarriersApi)
+Customs = define_api(CustomsApi)
+Parcels = define_api(ParcelsApi)
+Pickups = define_api(PickupsApi)
+Proxy = define_api(ProxyApi)
+Shipments = define_api(ShipmentsApi)
+Trackers = define_api(TrackersApi)
+Webhooks = define_api(WebhooksApi)
