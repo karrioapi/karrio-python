@@ -6,9 +6,6 @@ ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 BASE_DIR="${PWD##*/}"
 ENV_DIR=".venv"
 
-export EMAIL_HOST="localhost"
-export EMAIL_PORT=1025
-
 deactivate_env() {
   if command -v deactivate &> /dev/null
   then

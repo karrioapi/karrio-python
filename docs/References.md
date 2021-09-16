@@ -1,19 +1,27 @@
 # References
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**countries** | **object** |  | 
-**currencies** | **object** |  | 
-**carriers** | **object** |  | 
-**customs_content_type** | **object** |  | 
-**incoterms** | **object** |  | 
-**states** | **object** |  | 
-**services** | **object** |  | 
-**options** | **object** |  | 
-**package_presets** | **object** |  | 
-**packaging_types** | **object** |  | 
-**payment_types** | **object** |  | 
+**app_name** | **str** |  | 
+**app_version** | **str** |  | 
+**countries** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**currencies** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**carriers** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**customs_content_type** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**incoterms** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**states** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**services** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**service_names** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**options** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**option_names** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**package_presets** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**packaging_types** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**payment_types** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**carrier_capabilities** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 
