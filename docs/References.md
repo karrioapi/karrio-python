@@ -6,6 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **app_name** | **str** |  | 
 **app_version** | **str** |  | 
+**app_website** | **str** |  | 
+**multi_organizations** | **bool** |  | 
+**address_auto_complete** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
 **countries** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
 **currencies** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
 **carriers** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
