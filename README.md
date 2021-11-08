@@ -6,7 +6,7 @@ Visit [purplship.com](https://purplship.com) to deploy your private cloud multi-
 
 ## Documentation
 
-See the full [Python API docs](https://docs.purplship.com).
+See the full [Python API docs](https://next.purplship.com/docs/reference).
 
 ## Requirements
 
@@ -50,7 +50,6 @@ except ApiException as e:
 
 ## Documentation For Models
 
- - [AccessToken](docs/AccessToken.md)
  - [Address](docs/Address.md)
  - [AddressData](docs/AddressData.md)
  - [AddressList](docs/AddressList.md)
@@ -105,8 +104,6 @@ except ApiException as e:
  - [WebhookData](docs/WebhookData.md)
  - [WebhookList](docs/WebhookList.md)
  - [WebhookTestRequest](docs/WebhookTestRequest.md)
-
-
 
 ## Author
 

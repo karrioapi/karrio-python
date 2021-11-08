@@ -9,7 +9,6 @@
 # import sys
 # sys.setrecursionlimit(n)
 
-from purplship.model.access_token import AccessToken
 from purplship.model.address import Address
 from purplship.model.address_data import AddressData
 from purplship.model.address_list import AddressList
