@@ -61,11 +61,9 @@ class TrackingStatus(ModelNormal):
 
     allowed_values = {
         ('status',): {
-            'CREATED': "created",
-            'PURCHASED': "purchased",
-            'CANCELLED': "cancelled",
-            'SHIPPED': "shipped",
+            'PENDING': "pending",
             'IN-TRANSIT': "in-transit",
+            'INCIDENT': "incident",
             'DELIVERED': "delivered",
         },
     }
@@ -184,7 +182,7 @@ class TrackingStatus(ModelNormal):
             id (str): A unique identifier. [optional]  # noqa: E501
             events ([TrackingEvent], none_type): The tracking details events. [optional]  # noqa: E501
             delivered (bool): Specified whether the related shipment was delivered. [optional]  # noqa: E501
-            status (str): The current tracking status. [optional] if omitted the server will use the default value of "created"  # noqa: E501
+            status (str): The current tracking status. [optional] if omitted the server will use the default value of "pending"  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -279,7 +277,7 @@ class TrackingStatus(ModelNormal):
             id (str): A unique identifier. [optional]  # noqa: E501
             events ([TrackingEvent], none_type): The tracking details events. [optional]  # noqa: E501
             delivered (bool): Specified whether the related shipment was delivered. [optional]  # noqa: E501
-            status (str): The current tracking status. [optional] if omitted the server will use the default value of "created"  # noqa: E501
+            status (str): The current tracking status. [optional] if omitted the server will use the default value of "pending"  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
