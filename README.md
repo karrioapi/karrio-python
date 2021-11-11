@@ -41,7 +41,7 @@ purplship.api_key = 'YOUR_API_KEY'
 purplship.host = 'https://instance.purplship.api'
 
 try:
-    api_response = purplship.Carriers.list()
+    api_response = purplship.carriers.list()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling purplship.Carriers->list: %s\n" % e)

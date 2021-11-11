@@ -63,12 +63,6 @@ class CustomsList(ModelNormal):
     }
 
     validations = {
-        ('next',): {
-            'min_length': 1,
-        },
-        ('previous',): {
-            'min_length': 1,
-        },
     }
 
     @cached_property
@@ -95,8 +89,8 @@ class CustomsList(ModelNormal):
         lazy_import()
         return {
             'results': ([Customs],),  # noqa: E501
-            'next': (str,),  # noqa: E501
-            'previous': (str,),  # noqa: E501
+            'next': (str, none_type,),  # noqa: E501
+            'previous': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -154,8 +148,8 @@ class CustomsList(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            next (str): [optional]  # noqa: E501
-            previous (str): [optional]  # noqa: E501
+            next (str, none_type): [optional]  # noqa: E501
+            previous (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -241,8 +235,8 @@ class CustomsList(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            next (str): [optional]  # noqa: E501
-            previous (str): [optional]  # noqa: E501
+            next (str, none_type): [optional]  # noqa: E501
+            previous (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
