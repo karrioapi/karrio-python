@@ -15,7 +15,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 NAME = "purplship-python"
-VERSION = "2021.10.2"
+VERSION = "2021.10.3"
 
 # To install the library, run the following
 #
