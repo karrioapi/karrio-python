@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **tracking_url** | **str, none_type** | The shipment tracking url | [optional] 
 **service** | **str, none_type** | The selected service | [optional] 
 **services** | **[str], none_type** |  The carriers services requested for the shipment.  Please consult [the reference](#operation/references) for specific carriers services.&lt;br/&gt; Note that this is a list because on a Multi-carrier rate request you could specify a service per carrier.  | [optional] 
-**options** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** |  The options available for the shipment.&lt;br/&gt; Please consult [the reference](#operation/references) for additional specific carriers options.  | [optional] 
+**options** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** |  &lt;details&gt; &lt;summary&gt;The options available for the shipment.&lt;/summary&gt;  &#x60;&#x60;&#x60; {     \&quot;currency\&quot;: \&quot;USD\&quot;,     \&quot;insurance\&quot;: 100.00,     \&quot;cash_on_delivery\&quot;: 30.00,     \&quot;shipment_date\&quot;: \&quot;2020-01-01\&quot;,     \&quot;dangerous_good\&quot;: true,     \&quot;declared_value\&quot;: 150.00,     \&quot;email_notification\&quot;: true,     \&quot;email_notification_to\&quot;: shipper@mail.com,     \&quot;signature_confirmation\&quot;: true, } &#x60;&#x60;&#x60;  Please check the docs for carrier specific options. &lt;/details&gt;  | [optional] 
 **payment** | [**Payment**](Payment.md) |  | [optional] 
 **customs** | [**Customs**](Customs.md) |  | [optional] 
 **reference** | **str, none_type** | The shipment reference | [optional] 

@@ -8,6 +8,9 @@ Name | Type | Description | Notes
 **app_version** | **str** |  | 
 **app_website** | **str** |  | 
 **multi_organizations** | **bool** |  | 
+**admin** | **str** |  | 
+**openapi** | **str** |  | 
+**graphql** | **str** |  | 
 **address_auto_complete** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
 **countries** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
 **currencies** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
@@ -23,6 +26,7 @@ Name | Type | Description | Notes
 **packaging_types** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
 **payment_types** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
 **carrier_capabilities** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
+**service_levels** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
