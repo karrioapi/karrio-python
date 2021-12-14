@@ -24,10 +24,11 @@ elif [[ "$*" == *build* ]]; then
 	clean_builds
     python setup.py bdist_wheel
 elif [[ "$*" == *upload* ]]; then
-    docker run --rm -it -v $PWD:/app python:3.8-slim bash -c '
+    source ~/.bashrc
+    docker run --rm -it -v $PWD:/app -e TWINE_USERNAME=$TWINE_USERNAME -e TWINE_PASSWORD=$TWINE_PASSWORD python:3.8-slim bash -c '
     cd /app &&
     pip install twine &&
-    twine upload dist/* &&
+    twine upload -u $TWINE_USERNAME -p $TWINE_PASSWORD dist/* &&
     echo "Uploaded to PyPI"
     '
 else

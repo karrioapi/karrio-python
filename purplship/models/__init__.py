@@ -24,6 +24,7 @@ from purplship.model.customs_list import CustomsList
 from purplship.model.duty import Duty
 from purplship.model.error_response import ErrorResponse
 from purplship.model.message import Message
+from purplship.model.metadata import Metadata
 from purplship.model.operation import Operation
 from purplship.model.operation_confirmation import OperationConfirmation
 from purplship.model.operation_response import OperationResponse

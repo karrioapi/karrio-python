@@ -2,7 +2,7 @@
 
 Purplship is a Multi-carrier Shipping API that simplifies the integration of logistic carrier services.
 
-Visit [purplship.com](https://purplship.com) to deploy your private cloud multi-carrier shipping API instance.
+Visit [purplship.com](https://next.purplship.com) to deploy your private cloud multi-carrier shipping API instance.
 
 ## Documentation
 
@@ -10,7 +10,7 @@ See the full [Python API docs](https://next.purplship.com/docs/reference).
 
 ## Requirements
 
-Python 3.4+
+Python >= 3.6
 
 ## Installation & Usage
 
@@ -65,6 +65,7 @@ except ApiException as e:
  - [Duty](docs/Duty.md)
  - [ErrorResponse](docs/ErrorResponse.md)
  - [Message](docs/Message.md)
+ - [Metadata](docs/Metadata.md)
  - [Operation](docs/Operation.md)
  - [OperationConfirmation](docs/OperationConfirmation.md)
  - [OperationResponse](docs/OperationResponse.md)
@@ -107,4 +108,4 @@ except ApiException as e:
 
 ## Author
 
-PurplShip Team | hello@purplship.com | [purplship.com](https://purplship.com)
+Purplship Team | hello@purplship.com | [purplship.com](https://purplship.com)
