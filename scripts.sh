@@ -14,11 +14,11 @@ elif [[ "$*" == *gen:cli* ]]; then
     rm -rf "./codegen"
 	mkdir -p "./codegen"
 	docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate \
-		-i https://raw.githubusercontent.com/purplship/purplship/main/server/schemas/openapi.json \
+		-i https://raw.githubusercontent.com/karrioapi/karrio/main/server/schemas/openapi.json \
 		-g python \
 		-o /local/codegen/python \
-        --additional-properties=projectName=purplship-python \
-        --additional-properties=packageName=purplship \
+        --additional-properties=projectName=karrio-python \
+        --additional-properties=packageName=karrio \
         --additional-properties=pythonAttrNoneIfUnset=true
 elif [[ "$*" == *build* ]]; then
 	clean_builds

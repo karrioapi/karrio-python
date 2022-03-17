@@ -1,6 +1,6 @@
 # Charge
 
-The pickup cost details
+list of the rate's additional charges
 
 ## Properties
 Name | Type | Description | Notes

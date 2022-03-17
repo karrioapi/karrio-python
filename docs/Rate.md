@@ -1,6 +1,6 @@
 # Rate
 
-The list of returned rates
+The list for shipment rates fetched previously
 
 ## Properties
 Name | Type | Description | Notes
@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **currency** | **str** | The rate monetary values currency code | 
 **test_mode** | **bool** | Specified whether it was created with a carrier in test mode | 
 **id** | **str** | A unique identifier | [optional] 
+**object_type** | **str** | Specifies the object type | [optional]  if omitted the server will use the default value of "rate"
 **service** | **str, none_type** | The carrier&#39;s rate (quote) service | [optional] 
 **discount** | **float, none_type** | The monetary amount of the discount on the rate | [optional] 
 **base_charge** | **float** |  The rate&#39;s monetary amount of the base charge.&lt;br/&gt; This is the net amount of the rate before additional charges  | [optional] 
@@ -18,7 +19,6 @@ Name | Type | Description | Notes
 **transit_days** | **int, none_type** | The estimated delivery transit days | [optional] 
 **extra_charges** | [**[Charge]**](Charge.md) | list of the rate&#39;s additional charges | [optional] 
 **meta** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | provider specific metadata | [optional] 
-**carrier_ref** | **str, none_type** | The system carrier configuration id | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

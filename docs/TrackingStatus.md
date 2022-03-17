@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **delivered** | **bool** | Specified whether the related shipment was delivered | [optional] 
 **status** | **str** | The current tracking status | [optional]  if omitted the server will use the default value of "pending"
 **estimated_delivery** | **str** | The delivery estimated date | [optional] 
+**object_type** | **str** | Specifies the object type | [optional]  if omitted the server will use the default value of "tracker"
+**metadata** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** | User metadata for the tracker | [optional] 
 **messages** | [**[Message]**](Message.md) | The list of note or warning messages | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

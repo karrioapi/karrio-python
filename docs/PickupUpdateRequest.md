@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pickup_date** | **str** |  The expected pickup date  Date Format: &#x60;YYYY-MM-DD&#x60;  | 
 **address** | [**Address**](Address.md) |  | 
-**parcels** | [**[Parcel], none_type**](Parcel.md) | The shipment parcels to pickup. | 
+**parcels** | [**[Parcel]**](Parcel.md) | The shipment parcels to pickup. | 
 **confirmation_number** | **str** | pickup identification number | 
 **ready_time** | **str** |  The ready time for pickup.  Time Format: &#x60;HH:MM&#x60;  | 
 **closing_time** | **str** |  The closing or late time of the pickup  Time Format: &#x60;HH:MM&#x60;  | 

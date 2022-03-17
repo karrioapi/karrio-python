@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **address_line1** | **str, none_type** |  The address line with street number &lt;br/&gt; **(required for shipment purchase)**  | [optional] 
 **address_line2** | **str, none_type** | The address line with suite number | [optional] 
 **validate_location** | **bool, none_type** | Indicate if the address should be validated | [optional]  if omitted the server will use the default value of False
+**object_type** | **str** | Specifies the object type | [optional]  if omitted the server will use the default value of "address"
 **validation** | [**AddressValidation**](AddressValidation.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
