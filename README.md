@@ -44,7 +44,7 @@ try:
     api_response = karrio.carriers.list()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling karrio.Carriers->list: %s\n" % e)
+    print("Exception when calling karrio.carriers->list: %s\n" % e)
 
 ```
 
