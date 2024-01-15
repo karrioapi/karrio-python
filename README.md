@@ -1,3 +1,5 @@
+__This repository is not maintained anymore. Chat with us if you want to help maintain a Python client for Karrio at https://github.com/karrioapi/karrio__ 
+
 # karrio-python
 
 Karrio is a Multi-carrier Shipping API that simplifies the integration of logistic carrier services.
